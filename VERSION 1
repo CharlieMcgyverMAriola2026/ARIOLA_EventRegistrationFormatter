@@ -1,0 +1,12 @@
+# Version 1: Basic Input and Output
+
+full_name = input("Enter participant's full name: ")
+email = input("Enter email address: ")
+event_name = input("Enter event name: ")
+ticket_type = input("Enter ticket type (VIP/Regular): ")
+
+print("\n--- Event Registration Details ---")
+print("Name:", full_name)
+print("Email:", email)
+print("Event:", event_name)
+print("Ticket:", ticket_type)
