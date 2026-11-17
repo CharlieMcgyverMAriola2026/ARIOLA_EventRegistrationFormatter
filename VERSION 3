@@ -1,0 +1,25 @@
+# Version 3: String and Date/Time Formatting Applied
+from datetime import datetime
+
+full_name = input("Enter participant's full name: ").strip().title()
+email = input("Enter email address: ").strip().lower()
+event_name = input("Enter event name: ").strip().upper()
+ticket_type = input("Enter ticket type (VIP/Regular): ").strip().capitalize()
+event_date_input = input("Enter event date (YYYY-MM-DD): ").strip()
+
+# Format the event date and capture current registration timestamp
+event_date = datetime.strptime(event_date_input, "%Y-%m-%d")
+formatted_event_date = event_date.strftime("%B %d, %Y (%A)")
+registration_time = datetime.now().strftime("%b %d, %Y at %I:%M %p")
+
+print("\n" + "=" * 45)
+print(f"{'OFFICIAL EVENT REGISTRATION PASS':^45}")
+print("=" * 45)
+print(f"{'Participant:':<16} {full_name}")
+print(f"{'Email:':<16} {email}")
+print(f"{'Event:':<16} {event_name}")
+print(f"{'Event Date:':<16} {formatted_event_date}")
+print(f"{'Ticket Tier:':<16} {ticket_type}")
+print("-" * 45)
+print(f"{'Registered On:':<16} {registration_time}")
+print("=" * 45)
