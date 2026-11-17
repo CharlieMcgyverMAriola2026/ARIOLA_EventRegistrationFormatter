@@ -1,0 +1,15 @@
+# Version 2: String Formatting Applied
+
+full_name = input("Enter participant's full name: ").strip().title()
+email = input("Enter email address: ").strip().lower()
+event_name = input("Enter event name: ").strip().upper()
+ticket_type = input("Enter ticket type (VIP/Regular): ").strip().capitalize()
+
+print("\n" + "=" * 40)
+print(f"{'EVENT REGISTRATION PASS':^40}")
+print("=" * 40)
+print(f"{'Participant:':<15} {full_name}")
+print(f"{'Email:':<15} {email}")
+print(f"{'Event:':<15} {event_name}")
+print(f"{'Ticket Tier:':<15} {ticket_type}")
+print("=" * 40)
